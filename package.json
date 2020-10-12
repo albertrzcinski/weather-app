@@ -1,0 +1,30 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather application",
+  "main": "index.js",
+  "scripts": {
+    "build:scss": "node-sass --output-style compressed -o dist/styles src/styles",
+    "watch:scss": "onchange -i -v 'src/styles/*.scss' -- npm run build:scss",
+    "build:css": "npx postcss dist/styles/*.css --use autoprefixer -d dist/styles",
+    "lint:js": "eslint --fix src/js/*.js",
+    "watch:js": "onchange -i -v 'src/js/*.js' -- npm run lint:js",
+    "start": "browser-sync -s -w",
+    "watch:all": "npm-run-all --parallel start watch:scss watch:js "
+  },
+  "author": "Albert Trzciński <albertrzcinski@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "browser-sync": "^2.26.12",
+    "eslint": "^7.10.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "postcss": "^8.1.1",
+    "postcss-cli": "^8.0.0"
+  },
+  "dependencies": {}
+}
