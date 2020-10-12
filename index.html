@@ -8,6 +8,21 @@
     <link rel="stylesheet" href="./dist/styles/index.css">
 </head>
 <body>
+    <header class="header">
+        <h1 class="header__heading">Weather aplication</h1>
+    </header>
+
+    <main class="main">
+        <form action="" class="main__form form">
+            <label for="city" class="form__label">
+                Enter a location for weather information
+            </label>
+            <input type="text" name="city" id="city" class="form__input">
+            <input type="submit" value="Search" class="form__submit">
+        </form>
+
+        <div class="main__card card card--hidden"></div>
+    </main>
 
     <script defer src="./src/js/index.js"></script>
 </body>
