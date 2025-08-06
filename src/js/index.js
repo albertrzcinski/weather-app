@@ -5,8 +5,8 @@ const form = document.querySelector('.form');
 const card = document.querySelector('.card');
 
 const fetchWeather = async (city) => {
-  const key = TOKEN; // API key from http://www.weatherapi.com/
-  const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`;
+  const key = TOKEN; // API key from https://www.weatherapi.com/
+  const url = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`;
   const response = await fetch(url);
 
   if (response.status !== 200) {
@@ -43,7 +43,7 @@ const showData = (current, locationName) => {
     <img src="${imgSrc}" alt="Illustration of weather conditions" class="card__img">
     <div class="card__info">
         <div class="card__icon-wrapper">
-            <img class="card__icon" src="http:${current.condition.icon}" alt="Weather conditions icon">
+            <img class="card__icon" src="https:${current.condition.icon}" alt="Weather conditions icon">
         </div>
         <h2 class="card__heading"> ${locationName.toUpperCase()} </h2>
         <p class="card__weather"> ${current.condition.text.toUpperCase()} </p>
