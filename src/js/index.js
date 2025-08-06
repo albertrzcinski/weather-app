@@ -1,8 +1,11 @@
+// eslint-disable-next-line import/extensions
+import TOKEN from './config.js'; // Import the API key from a config file configured in netlify.toml
+
 const form = document.querySelector('.form');
 const card = document.querySelector('.card');
 
 const fetchWeather = async (city) => {
-  const key = ''; // enter API key from http://www.weatherapi.com/
+  const key = TOKEN; // API key from http://www.weatherapi.com/
   const url = `http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`;
   const response = await fetch(url);
 
