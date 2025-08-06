@@ -1,7 +1,0 @@
-# Netlify configuration for Weather App
-
-[build]
-  # Install dependencies and build CSS
-  command = "cd src/js && echo -e "export default 'YOUR_WEATHER_API_KEY_HERE';" > config.js && npm install && npm run build"
-  # Publish the root directory (index.html, src/, dist/)
-  publish = "."
